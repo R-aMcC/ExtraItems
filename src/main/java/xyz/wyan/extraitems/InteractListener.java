@@ -90,11 +90,11 @@ public class InteractListener implements Listener {
                 }
 
                 int level = player.getLevel();
-                logger.info("Level: " + level);
+                //logger.info("Level: " + level);
                 float progress = player.getExp();
-                logger.info("Progress: " + progress);
+                //logger.info("Progress: " + progress);
                 int totalExp = Experience.getTotalExperience(level, progress);
-                logger.info("Total exp: " + totalExp);
+                //logger.info("Total exp: " + totalExp);
 
                 int newTotalExp = -1;
                 int finalLevel = -1;
@@ -106,9 +106,9 @@ public class InteractListener implements Listener {
                             newTotalExp = totalExp-100;
                             finalLevel = Experience.getLevelFromExperience(newTotalExp);
                             finalProgress = Experience.getProgressFromExperience(newTotalExp, finalLevel);
-                            logger.info("Total exp: " + totalExp);
-                            logger.info("Final level: " + finalLevel);
-                            logger.info("Final progress: " + finalProgress);
+                            //logger.info("Total exp: " + totalExp);
+                            //logger.info("Final level: " + finalLevel);
+                            //logger.info("Final progress: " + finalProgress);
                             exp += 100;
                             meta.getPersistentDataContainer().set(key, org.bukkit.persistence.PersistentDataType.INTEGER, exp);
                             lore.set(2, Component.text("Experience: " + exp));
