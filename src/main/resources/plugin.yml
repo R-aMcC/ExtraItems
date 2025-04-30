@@ -1,0 +1,4 @@
+name: ExtraItems
+version: '${version}'
+main: xyz.wyan.extraitems.ExtraItems
+api-version: '1.21'
